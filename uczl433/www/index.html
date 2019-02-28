@@ -127,11 +127,11 @@ crossorigin=""></script>
           </div>
         </header>
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Inbox</a>
+          <a class="mdl-navigation__link" href="" onclick="callDivNodeJSChange();return false;"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Change Div Content</a>
+          <a class="mdl-navigation__link" href="" onclick="getPort();return false"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Get port number</a>
           <a class="mdl-navigation__link" href="" onclick='addPointLinePoly();return false'><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Add geometric figures</a>
           <a class="mdl-navigation__link" href="" onclick='getEarthquakes();return false'><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report</i>Get Earthquakes</a>
-          <a class="mdl-navigation__link" href="" onclick='callDivNodeJSChange();return false'><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Change Div Content</a>
+          <a class="mdl-navigation__link" href="" onclick='trackLocation();return false'><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Track User Location</a>
           <a class="mdl-navigation__link" href="" onclick='trackAndCircle();return false'><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i>Track and Circle</a>
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_offer</i>Promos</a>
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">shopping_cart</i>Purchases</a>
@@ -150,8 +150,22 @@ crossorigin=""></script>
 
       <main class="mdl-layout__content mdl-color--grey-100">
         <div id="mapid" style="width: 600px; height: 400px;"></div>
+      </main>
+
+      <main class="mdl-layout__content mdl-color--grey-100">
+      <h6>Change DIV content using AJAX</h6>
         <div id="ajaxtest" style="width: 1600px; height: 20px;"></div>
       </main>
+
+      <main class="mdl-layout__content mdl-color--grey-100">
+        <h6>Type the html file name here - note you need to include .html</h6>
+        <input type="text" name="filename" id="filename" size=50>
+        <div id="div1">this is the unchanged div content</div>>
+        <button id="button1" onclick="callDivChange()">Click me to change the DIV content
+        </button>
+      </main>
+
+
 
 
 
@@ -162,9 +176,10 @@ crossorigin=""></script>
 	<script src="js/leafletFunctions.js"></script>
   <script src="js/getEarthquakes.js"></script>
   <script src="js/userTracking.js"></script>
-  <script src="js/utilities.js"></script>
   <script src="js/startup.js"></script>
+  <script src="js/utilities.js"></script>
   <script src="js/AJAX.js"></script>
+  <script src="js/testAJAX.js"></script>
   <script>startup(); </script>
   </body>
 </html>
