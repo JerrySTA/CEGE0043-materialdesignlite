@@ -5,7 +5,7 @@ var name = document.getElementById("name").value;
 var surname = document.getElementById("surname").value;
 var module = document.getElementById("module").value;
 var postString = "name="+name +"&surname="+surname+"&module="+module;
-
+alert (postString);
 
 var client; // the global variable that holds the request
 function processData(postString) {
@@ -45,11 +45,3 @@ postString=postString+"&lecturetime=afternoon";
 // now get the select box values
 var language = document.getElementById("languageselectbox").value;
 postString = postString + "&language="+language;
-
-// now get the geometry values
-var latitude = document.getElementById("latitude").value;
-var longitude = document.getElementById("longitude").value;
-postString = postString + "&latitude=" + latitude + "&longitude=" +
-longitude;
-
-alert (postString);
