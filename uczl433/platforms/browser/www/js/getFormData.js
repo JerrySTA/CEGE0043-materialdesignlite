@@ -3,12 +3,15 @@ var client;
 // and a variable that will hold the layer itself – we need to do this outside the function so that we can use it to remove the layer later on
 var forms;
 // create the code to get the Earthquakes data using an XMLHttpRequest
+
 function getFormData() {
 client = new XMLHttpRequest();
-var url = "http://developer.cege.ucl.ac.uk:" + httpPortNumber + /getFormData/+ httpPortNumber;
+var url = "http://developer.cege.ucl.ac.uk:" + httpPortNumber + "/getGeoJSON/" + "london_poi/" + "geom/";
+alert(url)
 client.open('GET', url, true);
 client.onreadystatechange = formdataResponse; // note don't use earthquakeResponse() with brackets as that doesn't work
 client.send();
+alert(url)
 }
 
 
