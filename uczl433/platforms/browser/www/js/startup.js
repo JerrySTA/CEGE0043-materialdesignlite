@@ -2,7 +2,8 @@ function trackAndCircle() {
 	trackLocation();
 	addPointLinePoly();
 	getEarthquakes();
-	getPort();
+	getPort()
+	loadW3HTML();
 }
 
 function startup() {
